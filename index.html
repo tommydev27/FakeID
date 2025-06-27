@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="pwKvYalfLxSFwpDlCsan4yS_mEsUdJvUDrI2wKiIHXk" />
+    
+    <meta property="og:title" content="Tommy Website">
+    <meta property="og:description" content="Create stunning AI-generated images with ease using Tommy APP.">
+    <meta property="og:image" content="https://iili.io/3IFLCH7.png">
+    <meta property="og:url" content="https://tommydev27.github.io/tommy.fb-web/">
+    <meta property="og:type" content="website">
+    <meta property="fb:app_id" content="1245016886587008">
+    
+    <title>Tommy Website</title>
+
+    <link rel="stylesheet" href="https://static.xx.fbcdn.net/rsrc.php/v5/y2/l/0,cross/nC2XYYUISfm.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://static.xx.fbcdn.net/rsrc.php/v5/y8/l/0,cross/Z39OoPuXzgz.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FK1EY26W82"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-FK1EY26W82');
+    </script>
+</head>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #e0e0e0;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 5px;
+    }
+
+    .container {
+      background: white;
+      padding: 0px;
+      max-width: 420px;
+      height: 650px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+      text-align: center;
+    }
+
+    .field {
+      color: black;
+      line-height: 0.85;
+      letter-spacing: 0.2px;
+      word-spacing: 1px;
+      margin-bottom: 5px;
+      font-size: 10px;
+    }
+    
+    .field .editable {
+      display: inline-block;
+      max-width: 130px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      vertical-align: bottom;
+    }
+
+
+    #ktp {
+      position: relative;
+      width: 100%;
+      background: url('https://iili.io/FA5hiX9.md.jpg') no-repeat center center;
+      background-size: cover;
+      aspect-ratio: 1004 / 636;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+      font-size: clamp(12px, 2.8vw, 16px);
+      padding: 10px;
+    }
+
+    .editable {
+      font-weight: bold;
+      border-bottom: 1px dashed transparent;
+      outline: none;
+      display: inline-block;
+      min-width: 60px;
+    }
+
+    .editable:focus {
+      background: rgba(255, 255, 255, 0.7);
+      border-color: black;
+    }
+
+    #foto {
+      position: absolute;
+      top: 50px;
+      right: 15px;
+      width: 90px;
+      border-radius: 5px;
+      height: 120px;
+      object-fit: cover;
+      background: #ccc;
+      border: 1px solid black;
+    }
+
+    .judul {
+      font-size: 13px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .ttd {
+      position: absolute;
+      bottom: 30px;
+      right: 25px;
+      text-align: center;
+      font-size: 10px;
+      display: inline-block;
+      max-width: 80px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      vertical-align: bottom;
+    }
+
+    .ttd span {
+      display: block;
+    }
+
+    .controls {
+      margin-top: 0px;
+      padding: 10px;
+      flex-wrap: wrap;
+      gap: 0px;
+    }
+
+    .controls input,
+    .controls button {
+      padding: 10px;
+      margin-left: -40px;
+      font-size: 14px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .controls input[type="file"] {
+      background: #fff;
+    }
+
+    .controls button {
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .controls button:hover {
+      background-color: #0056b3;
+    }
+    
+    .bg-ktp {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    
+    .kotak {
+      display: inline-block;
+      max-width: 150px; /* Atur sesuai kebutuhan */
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      vertical-align: bottom;
+    }
+    
+    .ttd-text {
+      font-family: 'Great Vibes', cursive;
+      margin-bottom: 0px;
+      font-size: 14px;
+      font-weight: bold;
+      display: inline-block;
+      max-width: 170px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      vertical-align: bottom;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>FAKE ID</h2>
+
+    <div id="ktp">
+      <img src="https://iili.io/FA5hiX9.md.jpg" class="bg-ktp" />
+
+      <div class="judul"><span class="editable" contenteditable>PROVINSI DKI JAKARTA<br>JAKARTA BARAT</div>
+      <img id="foto" src="https://iili.io/FAAh6OP.jpg" alt="Foto" />
+      <div class="ttd">
+        <span class="kotak"><span class="editable" contenteditable>JAKARTA BARAT</span></span>
+        <span class="kotak"><span class="editable" contenteditable>02-12-2012</span></span>
+      
+        <span class="ttd-text" contenteditable="true">TTD</span>
+      </div>
+
+    <div class="field" style=" font-size: 12px; ">
+      NIK :
+      <span class="editable" contenteditable
+        style=" font-size: 12px; letter-spacing: 1px;">
+        3674072257025008
+      </span>
+    </div>
+
+      <div class="field">Nama : <span class="editable" contenteditable>SESUAIKAN</span></div>
+      <div class="field">Tempat/Tgl Lahir : <span class="editable" contenteditable>JAKARTA 22-04-1999</span></div>
+      <div class="field">Jenis Kelamin : <span class="editable" contenteditable>SESUAIKAN</span></div>
+      <div class="field">Alamat : <span class="editable" contenteditable>SESUAIKAN</span></div>
+      <div class="field">RT/RW : <span class="editable" contenteditable>000/000</span></div>
+      <div class="field">Kel/Desa : <span class="editable" contenteditable>SESUAIKAN</span></div>
+      <div class="field">Kecamatan : <span class="editable" contenteditable>SESUAIKAN</span></div>
+      <div class="field">Agama : <span class="editable" contenteditable>ISLAM</span></div>
+      <div class="field">Status Perkawinan : <span class="editable" contenteditable>BELUM KAWIN</span></div>
+      <div class="field">Pekerjaan : <span class="editable" contenteditable>PNS</span></div>
+      <div class="field">Kewarganegaraan : <span class="editable" contenteditable>WNI</span></div>
+      <div class="field">Berlaku Hingga : <span class="editable" contenteditable>18-09-2016</span></div>
+
+    </div>
+
+    <div class="controls">
+      <input type="file" accept="image/*" onchange="loadFoto(event)">
+          <div class="controls">
+      <button onclick="downloadKTP()">Download</button>
+    </div>
+      </div>
+    <b>Petunjuk :
+    <h4>Edit text pada bagian ktp/id <br> Isi bidang dengan jelas spasi dan terbaca</h4>
+
+    <a style=" color: gray; font-size: 10px;">Design: Tommy web V0.1.0 ©</a>
+  </div>
+</div>
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+<script>
+  function loadFoto(event) {
+    const foto = document.getElementById('foto');
+    foto.src = URL.createObjectURL(event.target.files[0]);
+  }
+
+  function downloadKTP() {
+    html2canvas(document.querySelector("#ktp"), { useCORS: true }).then(canvas => {
+      const link = document.createElement("a");
+      link.download = "TM.id-card.png";
+      link.href = canvas.toDataURL("image/png");
+      link.click();
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const foto = document.getElementById('foto');
+    const fileInput = document.querySelector('input[type="file"]');
+
+    foto.addEventListener('click', () => {
+      fileInput.click();
+    });
+  });
+</script>
+
+</body>
+</html>
