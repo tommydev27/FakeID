@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -62,15 +63,35 @@
       text-align: center;
     }
 
-    .field {
-      color: black;
-      line-height: 0.85;
-      letter-spacing: 0.2px;
-      word-spacing: 1px;
-      margin-bottom: 5px;
-      font-size: 10px;
-    }
-    
+
+      .field {
+        display: flex;
+        align-items: baseline;
+        font-size: 10px;
+        margin-bottom: 4px;
+        color: black;
+        line-height: 0.85;
+        letter-spacing: 0.2px;
+        word-spacing: 1px;
+      }
+      
+      .label-wrap {
+        display: flex;
+        min-width: 99px;
+        justify-content: space-between;
+      }
+      
+      .label {
+        text-align: left;
+        flex: 1;
+      }
+      
+      .separator {
+        text-align: right;
+        width: 10px;
+        margin-right: 1px;
+      }
+
     .field .editable {
       display: inline-block;
       max-width: 130px;
@@ -92,13 +113,19 @@
       padding: 10px;
     }
 
-    .editable {
-      font-weight: bold;
-      border-bottom: 1px dashed transparent;
-      outline: none;
-      display: inline-block;
-      min-width: 60px;
-    }
+.editable {
+  font-weight: bold;
+  border-bottom: 1px dashed transparent;
+  outline: none;
+  display: inline-block;
+  min-width: 60px;
+  max-width: 130px;
+  white-space: nowrap;
+  overflow: visible;           
+  text-overflow: unset;       
+  padding-bottom: 1px;       
+}
+
 
     .editable:focus {
       background: rgba(255, 255, 255, 0.7);
@@ -107,11 +134,11 @@
 
     #foto {
       position: absolute;
-      top: 50px;
-      right: 15px;
+      top: 60px;
+      right: 17px;
       width: 90px;
       border-radius: 5px;
-      height: 120px;
+      height: 115px;
       object-fit: cover;
       background: #ccc;
       border: 1px solid black;
@@ -121,12 +148,12 @@
       font-size: 13px;
       font-weight: bold;
       text-align: center;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
     }
 
     .ttd {
       position: absolute;
-      bottom: 30px;
+      bottom: 15px;
       right: 25px;
       text-align: center;
       font-size: 10px;
@@ -143,7 +170,7 @@
     }
 
     .controls {
-      margin-top: 0px;
+      margin-top: 10px;
       padding: 10px;
       flex-wrap: wrap;
       gap: 0px;
@@ -183,7 +210,7 @@
     
     .kotak {
       display: inline-block;
-      max-width: 150px; /* Atur sesuai kebutuhan */
+      max-width: 155px; /* Atur sesuai kebutuhan */
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -202,57 +229,80 @@
       white-space: nowrap;
       vertical-align: bottom;
     }
+    
+    .field.indent1 {
+      padding-left: 20px;
+    }
+    
+    .label-wrap1 {
+      display: flex;
+      min-width: 78px;
+      justify-content: space-between;
+    }
 
   </style>
 </head>
 <body>
 
   <div class="container">
-    <h2>FAKE ID</h2>
+    <h2>ID CARD PW 🇲🇨</h2>
 
-    <div id="ktp">
-      <img src="https://iili.io/FA5hiX9.md.jpg" class="bg-ktp" />
+<div id="ktp">
+  <img src="https://iili.io/FA5hiX9.md.jpg" class="bg-ktp" />
+  <div class="judul"><span class="editable" contenteditable>PROVINSI DKI JAKARTA<br>JAKARTA BARAT</span></div>
+  <img id="foto" src="https://iili.io/FAAh6OP.jpg" alt="Foto" />
+  <div class="ttd">
+    <span class="kotak"><span class="editable" contenteditable>JAKARTA BARAT</span></span>
+    <span class="kotak"><span class="editable" contenteditable>02-12-2020</span></span>
+    <span class="ttd-text" contenteditable="true">TTD</span>
+  </div>
 
-      <div class="judul"><span class="editable" contenteditable>PROVINSI DKI JAKARTA<br>JAKARTA BARAT</div>
-      <img id="foto" src="https://iili.io/FAAh6OP.jpg" alt="Foto" />
-      <div class="ttd">
-        <span class="kotak"><span class="editable" contenteditable>JAKARTA BARAT</span></span>
-        <span class="kotak"><span class="editable" contenteditable>02-12-2012</span></span>
-      
-        <span class="ttd-text" contenteditable="true">TTD</span>
+    <div class="field"><div class="label-wrap"><div class="label">NIK</div><div class="separator">:</div></div><span class="editable" contenteditable>3674072257025008</span></div>
+    <div class="field"><div class="label-wrap"><div class="label">Nama</div><div class="separator">:</div></div><span class="editable" contenteditable>ISI KOLOM</span></div>
+    <div class="field"><div class="label-wrap"><div class="label">Tempat/Tgl Lahir</div><div class="separator">:</div></div><span class="editable" contenteditable>JAKARTA 22-04-2000</span></div>
+    <div class="field"><div class="label-wrap"><div class="label">Jenis Kelamin</div><div class="separator">:</div></div><span class="editable" contenteditable>WANITA</span></div>
+    <div class="field"><div class="label-wrap"><div class="label">Alamat</div><div class="separator">:</div></div><span class="editable" contenteditable>KP UTAN BAHAGIA</span></div>
+    
+    <div class="field indent1">
+      <div class="label-wrap1">
+        <div class="label1">RT/RW</div>
+        <div class="separator1">:</div>
       </div>
-
-    <div class="field" style=" font-size: 12px; ">
-      NIK :
-      <span class="editable" contenteditable
-        style=" font-size: 12px; letter-spacing: 1px;">
-        3674072257025008
-      </span>
+      <span class="editable" contenteditable>003 / 004</span>
     </div>
-
-      <div class="field">Nama : <span class="editable" contenteditable>SESUAIKAN</span></div>
-      <div class="field">Tempat/Tgl Lahir : <span class="editable" contenteditable>JAKARTA 22-04-1999</span></div>
-      <div class="field">Jenis Kelamin : <span class="editable" contenteditable>SESUAIKAN</span></div>
-      <div class="field">Alamat : <span class="editable" contenteditable>SESUAIKAN</span></div>
-      <div class="field">RT/RW : <span class="editable" contenteditable>000/000</span></div>
-      <div class="field">Kel/Desa : <span class="editable" contenteditable>SESUAIKAN</span></div>
-      <div class="field">Kecamatan : <span class="editable" contenteditable>SESUAIKAN</span></div>
-      <div class="field">Agama : <span class="editable" contenteditable>ISLAM</span></div>
-      <div class="field">Status Perkawinan : <span class="editable" contenteditable>BELUM KAWIN</span></div>
-      <div class="field">Pekerjaan : <span class="editable" contenteditable>PNS</span></div>
-      <div class="field">Kewarganegaraan : <span class="editable" contenteditable>WNI</span></div>
-      <div class="field">Berlaku Hingga : <span class="editable" contenteditable>18-09-2016</span></div>
-
+    
+    <div class="field indent1">
+      <div class="label-wrap1">
+        <div class="label1">Kel/Desa</div>
+        <div class="separator1">:</div>
+      </div>
+      <span class="editable" contenteditable>CENGKARENG TIMUR</span>
     </div>
-
+    
+    <div class="field indent1">
+      <div class="label-wrap1">
+        <div class="label1">Kecamatan</div>
+        <div class="separator1">:</div>
+      </div>
+      <span class="editable" contenteditable>CENGKARENG</span>
+    </div>
+    
+    <div class="field"><div class="label-wrap"><div class="label">Agama</div><div class="separator">:</div></div><span class="editable" contenteditable>ISLAM</span></div>
+    <div class="field"><div class="label-wrap"><div class="label">Status Perkawinan</div><div class="separator">:</div></div><span class="editable" contenteditable>BELUM KAWIN</span></div>
+    <div class="field"><div class="label-wrap"><div class="label">Pekerjaan</div><div class="separator">:</div></div><span class="editable" contenteditable>PNS</span></div>
+    <div class="field"><div class="label-wrap"><div class="label">Kewarganegaraan</div><div class="separator">:</div></div><span class="editable" contenteditable>WNI</span></div>
+    <div class="field"><div class="label-wrap"><div class="label">Berlaku Hingga</div><div class="separator">:</div></div><span class="editable" contenteditable>18-09-2016</span></div>
+    </div>
+    
     <div class="controls">
       <input type="file" accept="image/*" onchange="loadFoto(event)">
           <div class="controls">
       <button onclick="downloadKTP()">Download</button>
     </div>
       </div>
+          <div class="controls" style="color: #333;">
     <b>Petunjuk :
-    <h4>Edit text pada bagian ktp/id <br> Isi bidang dengan jelas spasi dan terbaca</h4>
+    <h4>Edit text pada bagian ktp/id <br> Isi bidang dengan jelas spasi  terbaca hurup besar</h4>
 
     <a style=" color: gray; font-size: 10px;">Design: Tommy web V0.1.0 ©</a>
   </div>
