@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -37,14 +38,14 @@
     }
 
     body {
-      background: #e0e0e0;
+      background: #444;
       font-family: Arial, sans-serif;
       margin: 0;
-      padding: 5px;
+      padding: 15px;
     }
 
     .container {
-      background: white;
+      background: #333;
       padding: 0px;
       max-width: 420px;
       height: 650px;
@@ -58,7 +59,7 @@
 
     h2 {
       margin-bottom: 20px;
-      color: #333;
+      color: #444;
       text-align: center;
     }
 
@@ -112,18 +113,18 @@
       padding: 10px;
     }
 
-.editable {
-  font-weight: bold;
-  border-bottom: 1px dashed transparent;
-  outline: none;
-  display: inline-block;
-  min-width: 60px;
-  max-width: 130px;
-  white-space: nowrap;
-  overflow: visible;           
-  text-overflow: unset;       
-  padding-bottom: 1px;       
-}
+    .editable {
+      font-weight: bold;
+      border-bottom: 1px dashed transparent;
+      outline: none;
+      display: inline-block;
+      min-width: 60px;
+      max-width: 130px;
+      white-space: nowrap;
+      overflow: visible;           
+      text-overflow: unset;       
+      padding-bottom: 1px;       
+    }
 
 
     .editable:focus {
@@ -189,13 +190,13 @@
     }
 
     .controls button {
-      background-color: #26a9a3;
+      background:linear-gradient(180deg,#b72900,#571400);
       color: #fff;
       cursor: pointer;
     }
 
     .controls button:hover {
-      background-color: #0056b3;
+      background-color: #2f0404;
     }
     
     .bg-ktp {
@@ -239,12 +240,44 @@
       justify-content: space-between;
     }
 
+    header{
+      width:100%;
+      display:flex;
+      justify-content:flex-start; /* paksa ke kiri */
+      align-items:center;
+      gap:10px;
+      padding:5px 10px;
+      border-bottom:1px solid var(--border);
+      font-family:Normal;
+      margin-bottom:0;
+      margin-left:0;
+      text-align:left;
+    }
+    
+    header h1{
+      font-size:16px;
+      margin:0;
+      font-weight:700;
+      color:#fff;
+    }
+    header .badge{
+      font-size:11px;
+      color:#02c302;
+      background:#0a0a0a;
+      border:1px solid #123a18;
+      padding:2px 6px;
+      border-radius:999px;
+    }
+
   </style>
 </head>
 <body>
 
   <div class="container">
-    <h2 style="color: #26a9a3; font-size: 18px; align-items: left;">ID CARD PW 🇲🇨</h2>
+     <header>
+    <h1>Create iD Card </h1>
+    <span class="badge">Tommy • Web • V0.1.0</span>
+  </header>
 
 <div id="ktp">
   <img src="https://iili.io/FA5hiX9.md.jpg" class="bg-ktp" />
@@ -299,7 +332,7 @@
       <button onclick="downloadKTP()">Download</button>
     </div>
       </div>
-          <div class="controls" style="color: #333;">
+          <div class="controls" style="color: #fff;">
     <b>Petunjuk :
     <h4>Edit text pada bagian ktp/id <br> Isi bidang dengan jelas spasi  terbaca hurup besar</h4>
 
